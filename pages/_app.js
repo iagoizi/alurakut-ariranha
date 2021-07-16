@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: sans-serif;
-    background-color: #D9E6F6;
+    background-color: #202024;
   }
 
   #__next {
@@ -31,7 +31,24 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   colors: {
-    primary: 'red',
+    background: '#121214',
+    green: '#04d361',
+    red: '#e83f5b',
+    orange: '#fd951f',
+    yellow: '#f7df1e',
+    primary: '#8257e6',
+    primaryHover: '#9466ff',
+    secondary: '#e1e1e6',
+    text: '#a8a8b3',
+    textEmphasis: 'rgba(255,255,255,87%)',
+    support: '#737380',
+    shape: '#202024',
+    shapeHover: '#29292e',
+    shape2: '#311377',
+    icons: '#41414d',
+    borders: '#323238',
+    black: '#0d0d0f',
+    white: '#fff',
   },
 };
 
