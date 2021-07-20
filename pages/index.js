@@ -27,15 +27,25 @@ export default function Home() {
   const pessoasFavoritas = ['DanielleEmely', 'Cesar-Danilo', 'joaovitorvaz', 'lsclgr', 'pmalaquias', 'dan-ueno'];
   const [comunidades, setComunidades] = React.useState([
     {
+      id: '12802378123789378912789789123896124',
+      title: 'Vittar Lovers',
+      image: 'https://i.imgur.com/kcJgQ2H.gif',
+    },
+    {
+      id: '12802378123789378912789789123896179',
+      title: '한국어에 관심이 있는 사람',
+      image: 'https://th.bing.com/th/id/OIP.ilo5uXnxqtBq-WecJgVdlgHaJ0?pid=ImgDet&rs=1',
+    },
+    {
       id: '12802378123789378912789789123896123',
-      title: 'Eu odeio acordar cedo',
-      image: 'https://alurakut.vercel.app/capa-comunidade-01.jpg',
+      title: 'Pokémon trainers',
+      image: 'https://th.bing.com/th/id/R.0e2c0e5ecfae3bac8f46e763c86b8aef?rik=KBNHWhUUgQcLbw&pid=ImgRaw',
     },
   ]);
 
   return (
     <>
-      <AlurakutMenu />
+      <AlurakutMenu githubUser={usuarioAleatorio} />
       <MainGrid>
         <div className='profileArea' style={{ gridArea: 'profileArea' }}>
           <ProfileSidebar githubUser={usuarioAleatorio} />
