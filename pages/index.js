@@ -30,16 +30,19 @@ export default function Home() {
       id: '12802378123789378912789789123896124',
       title: 'Vittar Lovers',
       image: 'https://i.imgur.com/kcJgQ2H.gif',
+      url: 'https://www.facebook.com/vittar.lovers.oficial.fc/community',
     },
     {
       id: '12802378123789378912789789123896179',
-      title: '한국어에 관심이 있는 사람',
+      title: '한국에 관심이 있는 사람',
       image: 'https://th.bing.com/th/id/OIP.ilo5uXnxqtBq-WecJgVdlgHaJ0?pid=ImgDet&rs=1',
+      url: 'https://www.facebook.com/groups/1669301129996963/',
     },
     {
       id: '12802378123789378912789789123896123',
-      title: 'Pokémon trainers',
-      image: 'https://th.bing.com/th/id/R.0e2c0e5ecfae3bac8f46e763c86b8aef?rik=KBNHWhUUgQcLbw&pid=ImgRaw',
+      title: 'Broadway Meme',
+      image: 'https://th.bing.com/th/id/OIP.RhH8IBy6YigfDBM6yT8joAHaEK?pid=ImgDet&rs=1',
+      url: 'https://www.facebook.com/groups/379225282231132',
     },
   ]);
 
@@ -67,6 +70,7 @@ export default function Home() {
                   id: new Date().toISOString(),
                   title: dadosDoForm.get('title'),
                   image: dadosDoForm.get('image'),
+                  url: dadosDoForm.get('url'),
                 };
                 if (comunidades.length < 6) {
                   const comunidadesAtualizadas = [...comunidades, comunidade];
@@ -89,6 +93,13 @@ export default function Home() {
                   aria-label='Coloque uma URL para usarmos de capa'
                 />
               </div>
+              <div>
+                <input
+                  placeholder='Coloque o link para sua comunidade'
+                  name='url'
+                  aria-label='Coloque o link para sua comunidade'
+                />
+              </div>
 
               <button>Criar comunidade</button>
             </form>
@@ -101,7 +112,7 @@ export default function Home() {
               {comunidades.map((itemAtual) => {
                 return (
                   <li key={itemAtual.id}>
-                    <a href={`/users/${itemAtual.title}`}>
+                    <a href={itemAtual.url /*`/users/${itemAtual.title}`*/}>
                       <img src={itemAtual.image} />
                       <span>{itemAtual.title}</span>
                     </a>
